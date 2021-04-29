@@ -27,6 +27,7 @@ def deploy_config(
         )
 
         vyos.enter_conf_mode()
+        vyos.load_default_config()
 
         for command in commands:
             vyos.run_conf_mode_command(command.strip())
