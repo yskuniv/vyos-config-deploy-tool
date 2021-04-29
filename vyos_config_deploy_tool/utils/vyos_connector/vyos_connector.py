@@ -43,6 +43,10 @@ class VyosConnector:
         self.child.sendline('exit')
         self.child.expect(OPE_MODE_PROMPT_PATTERN)
 
+    def load_default_config(self):
+        self.child.sendline('load /opt/vyatta/etc/config.boot.default')
+        self.child.expect(CONF_MODE_PROMPT_PATTERN)
+
     def run_conf_mode_command(self, command: str):
         self.child.sendline(command)
         matched_index = self.child.expect(
