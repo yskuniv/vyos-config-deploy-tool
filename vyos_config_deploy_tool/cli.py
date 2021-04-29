@@ -35,7 +35,7 @@ def main(config, host, login_name, port, identity_file):
             login_name=login_name,
             port=port,
             identity_file=identity_file,
-            logfile=sys.stdout
+            logfile=sys.stderr
         )
     except ConfigDeployFailedError:
         exit(1)
