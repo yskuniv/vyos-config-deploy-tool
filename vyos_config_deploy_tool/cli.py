@@ -25,6 +25,7 @@ from .deploy_config import (
               'identity_file',
               type=click.Path(exists=True, dir_okay=False),
               metavar='identity_file')
+@click.version_option()
 def main(config, host, login_name, port, identity_file):
     commands = config.readlines()
 
