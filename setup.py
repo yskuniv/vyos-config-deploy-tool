@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='vyos-config-deploy-tool',
-    version='0.1.0',
+    version='0.1-dev',
     packages=find_packages(),
     python_requires='>=3.8,<4',
     install_requires=[
